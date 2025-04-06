@@ -115,18 +115,6 @@
   font-weight: 700;
 }
 
-.hero-avatar {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.5s ease;
-}
-
-.hero-avatar:hover {
-  transform: scale(1.05);
-}
-
 .image-text {
   font-size: 5rem;
 }
@@ -154,11 +142,9 @@
   100% {
     transform: translateY(0) translateX(-50%);
   }
-
   40% {
     transform: translateY(-20px) translateX(-50%);
   }
-
   60% {
     transform: translateY(-10px) translateX(-50%);
   }
@@ -194,7 +180,7 @@
   gap: 0.75rem;
 }
 
-.home-about-intro {
+.about-intro {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--primary-color);
@@ -205,7 +191,6 @@
   font-size: 1rem;
   line-height: 1.6;
   color: var(--text-color);
-  margin: 0;
 }
 
 .about-info {
@@ -527,6 +512,10 @@
   .about-cards-grid {
     grid-template-columns: 1fr;
   }
+
+  .scroll-down {
+    bottom: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -537,4 +526,14 @@
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  /* Fix for scroll down button overlapping with social links */
+  .scroll-down {
+    bottom: 0.5rem;
+  }
+
+  .hero-social {
+    margin-bottom: 3rem; /* Add space below social links to prevent overlap */
+  }
 }
+

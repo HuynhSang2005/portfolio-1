@@ -55,8 +55,8 @@ const Projects = () => {
       description: t("projects.project3Desc"),
       image: "/placeholder.jpg",
       tags: ["React", "TypeScript", "Vite"],
-      github: "https://github.com/",
-      live: "https://example.com/",
+      github: "https://github.com/HuynhSang2005/portfolio-1",
+      live: "https://huynhsang.id.vn",
       featured: true,
     },
     // {

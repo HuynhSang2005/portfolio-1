@@ -332,7 +332,7 @@ const Home = () => {
                     ))}
                   </div>
                   <div className="project-links">
-                    <a href="#" className="project-link" aria-label="View code">
+                    <a href="https://github.com/HuynhSang2005/portfolio-1" target="_blank" className="project-link" aria-label="View code">
                       <Github size={18} />
                     </a>
                     <a href="#" className="project-link" aria-label="View live">

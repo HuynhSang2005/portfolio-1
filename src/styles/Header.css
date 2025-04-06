@@ -5,8 +5,7 @@
   width: 100%;
   z-index: 1000;
   padding: 1rem 0;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease,
-    padding 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
 }
 
 .header.scrolled {
@@ -34,6 +33,7 @@
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--text-color);
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .logo-text {
@@ -71,11 +71,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(
-    to right,
-    var(--gradient-start),
-    var(--gradient-end)
-  );
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
   transition: width 0.3s ease;
   border-radius: 1rem;
 }
@@ -254,17 +250,41 @@
   }
 }
 
+@media (max-width: 400px) {
+  .header-left {
+    flex-shrink: 0; /* Prevent the left side from shrinking */
+  }
+
+  .logo {
+    font-size: 1rem; /* Slightly smaller font size */
+  }
+
+  .mobile-controls {
+    gap: 0.3rem; /* Reduce gap between controls */
+  }
+
+  .mobile-controls .theme-toggle {
+    padding: 0.1rem;
+  }
+
+  .mobile-controls .theme-btn {
+    padding: 0.25rem;
+  }
+
+  .mobile-controls .lang-btn {
+    font-size: 0.8rem;
+    padding: 0.2rem;
+  }
+}
+
 .header-progress {
   position: absolute;
   bottom: 0;
   left: 0;
   height: 3px;
   width: 0;
-  background: linear-gradient(
-    to right,
-    var(--gradient-start),
-    var(--gradient-end)
-  );
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
   transition: width 0.3s ease;
 }
+
 
